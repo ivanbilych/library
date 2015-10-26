@@ -1,0 +1,19 @@
+<head>
+    <title>Library</title>
+</head>
+
+<body>
+    {% block header %}{% endblock %}
+
+    <div class="searchgroup">
+        <hr>
+        <input type="text" name="searchText" placeholder="Type request here">
+        Search by
+        <input type="radio" name="group1" value="title" checked> Title
+        <input type="radio" name="group1" value="author"> Author
+        <input type="submit" value="Search">
+        <hr>
+    </div>
+
+    {% block content %}{% endblock %}
+</body>

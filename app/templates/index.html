@@ -1,0 +1,11 @@
+{% extends "header.html" %}
+{% block content %}
+<ol>
+{% for book in books %}
+    <li><b>{{book.title}}</b> ({{book.year}})<br>
+    {% for author in book.authors %}
+        <i>{{author.name}}</i>{% if not loop.last %},{% endif %}
+    {% endfor %}
+{% endfor %}
+</ol>
+{% endblock %}

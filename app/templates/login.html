@@ -1,0 +1,16 @@
+{% extends "header.html" %}
+{% block content %}
+<form action="" method="post" name="login">
+    {{form.hidden_tag()}}
+
+    <p>
+        Login:<br>
+        {{form.login(size=40)}}<br>
+        Password:<br>
+        {{form.password(size=40)}}<br>
+
+        {{form.remember_me}} Remember<br>
+    </p>
+    <input type="submit" value="Sign In">
+</form>
+{% endblock %}

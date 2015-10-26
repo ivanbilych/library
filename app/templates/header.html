@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block header %}
+    <div class="header">
+        <nav>
+            <a href="index">Home</a>
+            {% if user %}
+                Hello {{user.nickname}}!
+                <a href="logout">Log out</a>
+            {% else %}
+                <a href="login">Sign In</a>
+                <a href="register">Sign Up</a>
+            {% endif %}
+        </nav>
+        <h1>Library</h1>
+    </div>
+{% endblock %}
